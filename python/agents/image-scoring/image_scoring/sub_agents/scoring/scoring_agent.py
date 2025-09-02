@@ -15,5 +15,5 @@ scoring_images_prompt = Agent(
     ),
     instruction=(SCORING_PROMPT),
     output_key="scoring",
-    tools=[get_policy, get_image, set_score],
+    tools=[get_image, set_score],
 )

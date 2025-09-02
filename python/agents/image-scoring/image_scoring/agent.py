@@ -1,6 +1,6 @@
 import datetime, uuid
 from zoneinfo import ZoneInfo
-from .sub_agents.prompt import image_generation_prompt_agent 
+from .sub_agents.prompt import decision_prompt_agent
 from .sub_agents.image import image_generation_agent 
 from .sub_agents.scoring import scoring_images_prompt 
 from .checker_agent import checker_agent_instance
@@ -40,7 +40,7 @@ image_generation_scoring_agent = SequentialAgent(
         3. Invoke the scoring_images_prompt agent to score the images
             """
     ),
-    sub_agents=[image_generation_prompt_agent, image_generation_agent, scoring_images_prompt],
+    sub_agents=[decision_prompt_agent, image_generation_agent, scoring_images_prompt],
 )
 
 
